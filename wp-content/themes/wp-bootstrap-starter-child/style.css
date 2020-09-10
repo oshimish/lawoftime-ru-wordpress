@@ -1,0 +1,91 @@
+/*
+CTC Separate Stylesheet
+Updated: 2020-06-06 17:21:17
+Theme Name: Law Of Time RU
+Theme URI: https://www.law-of-time.ru/
+Template: wp-bootstrap-starter
+Author: Raman Oshimish
+Author URI: https://www.law-of-time.ru/
+Description: Custo theme for the https://www.law-of-time.ru/ web site
+Tags: blog,custom-menu,featured-images,threaded-comments,translation-ready,right-sidebar,custom-background,e-commerce,theme-options,sticky-post,full-width-template
+Version: 3.3.3.1591453277
+*/
+
+header#masthead {
+  background-color: white;
+}
+
+.menu-item-object-category > a {
+  font-size: large;
+}
+
+.menu-item-has-children > a {
+  /* font-size: large; */
+}
+
+#menu-struktura {
+  background-color: white;
+  padding: 1rem;
+}
+
+#menu-struktura.nav > li > a {
+  font-size: large;
+}
+
+.site-content a {
+  color: black !important;
+}
+
+.site-content h4 {
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
+  color: black !important;
+}
+
+body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover {
+  color: black !important;
+}
+
+.site-main {
+  padding: 0 1rem;
+}
+
+#content.site-content {
+  padding-top: 2.125rem;
+}
+
+#primary {
+  order: 2;
+}
+#secondary {
+  order: 1;
+}
+#footer-widget {
+  background-color: #262626;
+}
+#colophon {
+  background-color: #363636 !important;
+}
+
+.entry-meta,
+.entry-footer {
+  display: none;
+}
+
+h1.entry-title {
+}
+
+.entry-content h2,
+.entry-header {
+  /* text-align: right; */
+  font-size: 1.61rem;
+}
+
+.nav.sub-menu {
+  margin-left: 1rem;
+}
