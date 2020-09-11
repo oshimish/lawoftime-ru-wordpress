@@ -39,4 +39,7 @@ function lof_custom_background_args($args) {
 add_filter( 'wp_bootstrap_starter_custom_background_args',
             'lof_custom_background_args' );
 
- 
+// register home page menu.
+    register_nav_menus( array(
+    'home' => esc_html__( 'Home', 'law-of-time' ),
+) );

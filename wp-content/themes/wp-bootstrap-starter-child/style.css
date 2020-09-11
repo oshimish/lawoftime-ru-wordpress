@@ -11,10 +11,6 @@ Tags: blog,custom-menu,featured-images,threaded-comments,translation-ready,right
 Version: 3.3.3.1591453277
 */
 
-header#masthead {
-  background-color: white;
-}
-
 .menu-item-object-category > a {
   font-size: large;
 }
@@ -88,4 +84,68 @@ h1.entry-title {
 
 .nav.sub-menu {
   margin-left: 1rem;
+}
+
+/*--------------------------------------------------------------
+## Common
+--------------------------------------------------------------*/
+
+.slogan {
+  max-height: 72px;
+}
+
+/*--------------------------------------------------------------
+## Front Page
+--------------------------------------------------------------*/
+.home article .entry-footer {
+  display: none;
+}
+
+.home .entry-content {
+  margin-top: 0;
+}
+
+/* adjust for admin bar */
+body.home.admin-bar #page {
+  padding-top: 32px;
+}
+
+.home #page {
+  position: relative;
+}
+
+.home-content {
+  position: absolute;
+  top: 0;
+
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+#homehead {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+
+  margin-bottom: 0;
+  background-color: transparent;
+  /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1); */
+  /* padding: 0.74rem 1rem; */
+}
+
+#homehead nav {
+}
+
+#homehead .navbar-nav > li > a {
+  color: #fff;
+  padding: 0.5rem;
+  font-weight: 500;
+  /* font-size: 0.875rem; */
+}
+
+#homehead .navbar-nav > li > a:hover,
+#homehead .navbar-nav > li.current_page_item > a {
+  color: #fff;
+  font-weight: 600;
 }
