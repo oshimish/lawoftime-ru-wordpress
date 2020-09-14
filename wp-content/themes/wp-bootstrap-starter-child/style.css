@@ -11,6 +11,51 @@ Tags: blog,custom-menu,featured-images,threaded-comments,translation-ready,right
 Version: 3.3.3.1591453277
 */
 
+/*--------------------------------------------------------------
+## Common
+--------------------------------------------------------------*/
+
+.slogan {
+  max-height: 72px;
+}
+
+a,
+a:hover {
+  color: black;
+}
+
+/*--------------------------------------------------------------
+## Layout
+--------------------------------------------------------------*/
+#pagehead {
+  margin-bottom: 0;
+  background-color: transparent;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  padding: 0.74rem 1rem;
+}
+#pagehead nav {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#pagehead .navbar-nav > li > a {
+  /* color: #cdbfe3;
+  padding: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem; */
+}
+
+#pagehead .navbar-nav > li > a:hover,
+#pagehead .navbar-nav > li.current_page_item > a {
+  /* color: black; */
+  font-weight: 600;
+  /*background: #f9f9f9;*/
+}
+
+/*--------------------------------------------------------------
+## Layout Header 
+--------------------------------------------------------------*/
 .menu-item-object-category > a {
   font-size: large;
 }
@@ -28,8 +73,22 @@ Version: 3.3.3.1591453277
   font-size: large;
 }
 
-.site-content a {
-  color: black !important;
+.nav.sub-menu {
+  margin-left: 1rem;
+}
+
+/*--------------------------------------------------------------
+## Layout Left Sidebar 
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Layout Content
+--------------------------------------------------------------*/
+
+.entry-content h2,
+.entry-header {
+  /* text-align: right; */
+  font-size: 1.61rem;
 }
 
 .site-content h4 {
@@ -37,14 +96,6 @@ Version: 3.3.3.1591453277
   line-height: 20px;
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-
-body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
-  color: black !important;
-}
-
-body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover {
-  color: black !important;
 }
 
 .site-main {
@@ -55,19 +106,6 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover {
   padding-top: 2.125rem;
 }
 
-#primary {
-  order: 2;
-}
-#secondary {
-  order: 1;
-}
-#footer-widget {
-  background-color: #262626;
-}
-#colophon {
-  background-color: #363636 !important;
-}
-
 .entry-meta,
 .entry-footer {
   display: none;
@@ -76,22 +114,15 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover {
 h1.entry-title {
 }
 
-.entry-content h2,
-.entry-header {
-  /* text-align: right; */
-  font-size: 1.61rem;
-}
-
-.nav.sub-menu {
-  margin-left: 1rem;
-}
-
 /*--------------------------------------------------------------
-## Common
+## Layout Footer
 --------------------------------------------------------------*/
 
-.slogan {
-  max-height: 72px;
+#footer-widget {
+  background-color: #262626;
+}
+#colophon {
+  background-color: #363636 !important;
 }
 
 /*--------------------------------------------------------------

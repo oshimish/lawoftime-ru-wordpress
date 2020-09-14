@@ -47,7 +47,7 @@
                 ?>
 
             </nav>
-        </header><!-- #masthead -->
+        </header><!-- #homehead -->
 
         <div id="content" class="home-content">
             <main id="main" class="home-main" role="main">

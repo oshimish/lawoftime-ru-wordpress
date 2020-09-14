@@ -14,21 +14,8 @@
 			</div><!-- .row -->
 		</div><!-- .container -->
 	</div><!-- #content -->
-    <?php get_template_part( 'footer-widget' ); ?>
-	<footer id="colophon" class="site-footer navbar-dark bg-primary" role="contentinfo">
-		<div class="container pt-3 pb-3">
-            <div class="site-info">
-                &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
-                <span class="sep"> | </span>
-                <a class="credits" href="https://lawoftime.org/" target="_blank" 
-					title="Foundation for the Law of Time" 
-					alt="Foundation for the Law of Time">
-				<?php echo esc_html__('Foundation for the Law of Time','wp-bootstrap-starter'); ?>
-				</a>
-
-            </div><!-- close .site-info -->
-		</div>
-	</footer><!-- #colophon -->
+	<?php get_template_part( 'footer-widget' ); ?>
+	<?php get_template_part( 'footer-siteinfo' ); ?>
 <?php endif; ?>
 </div><!-- #page -->
 
