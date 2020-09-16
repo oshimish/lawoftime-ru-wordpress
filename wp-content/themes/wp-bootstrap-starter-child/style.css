@@ -27,9 +27,14 @@ a:hover {
 /*--------------------------------------------------------------
 ## Layout
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Layout Header 
+--------------------------------------------------------------*/
+
 #pagehead {
   margin-bottom: 0;
-  background-color: transparent;
+  background-color: white;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   padding: 0.74rem 1rem;
@@ -53,33 +58,40 @@ a:hover {
   /*background: #f9f9f9;*/
 }
 
-/*--------------------------------------------------------------
-## Layout Header 
---------------------------------------------------------------*/
-.menu-item-object-category > a {
-  font-size: large;
-}
-
-.menu-item-has-children > a {
-  /* font-size: large; */
-}
-
-#menu-struktura {
-  background-color: white;
-  padding: 1rem;
-}
-
-#menu-struktura.nav > li > a {
-  font-size: large;
-}
-
-.nav.sub-menu {
-  margin-left: 1rem;
+#menu-top_menu {
 }
 
 /*--------------------------------------------------------------
 ## Layout Left Sidebar 
 --------------------------------------------------------------*/
+
+#secondary {
+}
+
+#secondary .widget_nav_menu {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+#secondary .menu {
+  background-color: white;
+  padding: 1rem;
+}
+
+#secondary .menu.nav > li > a {
+  font-size: large;
+}
+
+#secondary .nav.sub-menu {
+  margin-left: 1rem;
+}
+.menu-item-object-category > a {
+  /* font-size: large; */
+}
+
+.menu-item-has-children > a {
+  /* font-size: large; */
+}
 
 /*--------------------------------------------------------------
 ## Layout Content
@@ -102,6 +114,11 @@ a:hover {
   padding: 0 1rem;
 }
 
+.entry-content {
+}
+.entry-content {
+}
+
 #content.site-content {
   padding-top: 2.125rem;
 }
@@ -121,6 +138,14 @@ h1.entry-title {
 #footer-widget {
   background-color: #262626;
 }
+#footer-widget .widget {
+  font-size: 0.875rem;
+}
+
+#footer-widget .widget_nav_menu .nav.flex-column {
+  flex-direction: row !important;
+}
+
 #colophon {
   background-color: #363636 !important;
 }

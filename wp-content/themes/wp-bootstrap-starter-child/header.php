@@ -24,38 +24,31 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
 	<header id="pagehead" class="site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
-        <div class="container-fluid">
-            <nav class="navbar sticky-top navbar-expand-xl p-0">
-                <div class="navbar-brand">
-                    <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
-                        <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                            <img src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-                        </a>
-                    <?php else : ?>
-                        <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
-                    <?php endif; ?>
+        <nav class="navbar sticky-top navbar-light navbar-expand-xl p-0">
+            <div class="navbar-brand">
+                <a href="<?php echo esc_url( home_url( '/' )); ?>">
+                    <img class="slogan" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/img/Logo-Slogan.png'); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <?php
+            wp_nav_menu(array(
+            'theme_location'    => 'primary',
+            'container'       => 'div',
+            'container_id'    => 'main-nav',
+            'container_class' => 'collapse navbar-collapse justify-content-end',
+            'menu_id'         => false,
+            'menu_class'      => 'navbar-nav justify-content-between',
+            'depth'           => 3,
+            'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+            'walker'          => new wp_bootstrap_navwalker()
+            ));
+            ?>
 
-                <?php
-                wp_nav_menu(array(
-                'theme_location'    => 'primary',
-                'container'       => 'div',
-                'container_id'    => 'main-nav',
-                'container_class' => 'collapse navbar-collapse justify-content-end',
-                'menu_id'         => false,
-                'menu_class'      => 'navbar-nav',
-                'depth'           => 3,
-                'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                'walker'          => new wp_bootstrap_navwalker()
-                ));
-                ?>
-
-            </nav>
-        </div>
+        </nav>
 	</header><!-- #pagehead -->
     <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )): ?>
         <div id="page-sub-header" <?php if(has_header_image()) { ?>style="background-image: url('<?php header_image(); ?>');" <?php } ?>>
