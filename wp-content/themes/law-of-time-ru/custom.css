@@ -23,7 +23,17 @@ a,
 a:hover {
   color: black;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+}
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+}
 /*--------------------------------------------------------------
 ## Layout
 --------------------------------------------------------------*/
@@ -66,6 +76,7 @@ a:hover {
 --------------------------------------------------------------*/
 
 #secondary {
+  /* font-family: "Raleway", sans-serif !important; */
 }
 
 #secondary .widget_nav_menu {
@@ -106,7 +117,7 @@ a:hover {
 .site-content h4 {
   font-size: 20px;
   line-height: 20px;
-  margin-top: 2rem;
+  margin-top: 2.3rem;
   margin-bottom: 2rem;
 }
 
@@ -115,6 +126,10 @@ a:hover {
 }
 
 .entry-content {
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  padding: 0.74rem 1rem;
 }
 .entry-content {
 }
@@ -136,10 +151,19 @@ h1.entry-title {
 --------------------------------------------------------------*/
 
 #footer-widget {
-  background-color: #262626;
+  background-color: #262626 !important;
 }
+
+#footer-widget,
+#footer-widget .widget-title,
+#footer-widget a,
+#footer-widget a:hover {
+  color: #f9f9f9;
+}
+
 #footer-widget .widget {
   font-size: 0.875rem;
+  height: fit-content;
 }
 
 #footer-widget .widget_nav_menu .nav.flex-column {
@@ -151,7 +175,7 @@ h1.entry-title {
 }
 
 /*--------------------------------------------------------------
-## Front Page
+## Front (Home) Page
 --------------------------------------------------------------*/
 .home article .entry-footer {
   display: none;

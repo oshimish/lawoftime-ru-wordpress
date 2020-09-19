@@ -30,32 +30,3 @@ add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 // END ENQUEUE PARENT ACTION
 
-
-// https://wordpress.stackexchange.com/questions/224240/twenty-fifteen-theme-background-customization
-function lof_custom_background_args($args) {
-    $args['default-image'] = get_stylesheet_directory_uri() . '/img/TextureSimpleBrick.jpg';
-    return $args;
-}
-add_filter( 'wp_bootstrap_starter_custom_background_args',
-            'lof_custom_background_args' );
-
-// register home page menu.
-    register_nav_menus( array(
-    'home' => esc_html__( 'Home', 'law-of-time' ),
-) );
-
-function lof_widgets_init() {
-
-    register_sidebar( array(
-        'name'          => esc_html__( 'Site Info', 'law-of-time' ),
-        'id'            => 'site-info',
-        'description'   => esc_html__( 'Add widgets here.', 'law-of-time' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
-        'after_title'   => '</h3>',
-    ));
-}
-
-add_action( 'widgets_init',
-            'lof_widgets_init' );
