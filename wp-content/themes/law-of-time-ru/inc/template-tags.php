@@ -23,12 +23,12 @@ function wp_bootstrap_starter_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'wp-bootstrap-starter' ),
+		esc_html_x( 'Posted on %s', 'post date', 'law-of-time-ru' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'wp-bootstrap-starter' ),
+		esc_html_x( 'by %s', 'post author', 'law-of-time-ru' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -37,7 +37,7 @@ function wp_bootstrap_starter_posted_on() {
     if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
         echo ' | <span class="comments-link"><i class="fa fa-comments" aria-hidden="true"></i> ';
         /* translators: %s: post title */
-        comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'wp-bootstrap-starter' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+        comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'law-of-time-ru' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
         echo '</span>';
     }
 
@@ -52,15 +52,15 @@ function wp_bootstrap_starter_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'wp-bootstrap-starter' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', 'law-of-time-ru' ) );
 		if ( $categories_list && wp_bootstrap_starter_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'wp-bootstrap-starter' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'law-of-time-ru' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'wp-bootstrap-starter' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'law-of-time-ru' ) );
 		if ( $tags_list ) {
-			printf( ' | <span class="tags-links">' . esc_html__( 'Tagged %1$s', 'wp-bootstrap-starter' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( ' | <span class="tags-links">' . esc_html__( 'Tagged %1$s', 'law-of-time-ru' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
@@ -68,7 +68,7 @@ function wp_bootstrap_starter_entry_footer() {
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'wp-bootstrap-starter' ),
+			esc_html__( 'Edit %s', 'law-of-time-ru' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		' | <span class="edit-link">',
@@ -134,7 +134,7 @@ if ( ! function_exists( 'wp_bootstrap_starter_comment' ) ) :
 
             <li id="comment-<?php comment_ID(); ?>" <?php comment_class( 'media' ); ?>>
             <div class="comment-body">
-                <?php _e( 'Pingback:', 'wp-bootstrap-starter' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'wp-bootstrap-starter' ), '<span class="edit-link">', '</span>' ); ?>
+                <?php _e( 'Pingback:', 'law-of-time-ru' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'law-of-time-ru' ), '<span class="edit-link">', '</span>' ); ?>
             </div>
 
         <?php else : ?>
@@ -149,19 +149,19 @@ if ( ! function_exists( 'wp_bootstrap_starter_comment' ) ) :
                     <div class="media-body-wrap card">
 
                         <div class="card-header">
-                            <h5 class="mt-0"><?php printf( __( '%s <span class="says">says:</span>', 'wp-bootstrap-starter' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h5>
+                            <h5 class="mt-0"><?php printf( __( '%s <span class="says">says:</span>', 'law-of-time-ru' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h5>
                             <div class="comment-meta">
                                 <a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
                                     <time datetime="<?php comment_time( 'c' ); ?>">
-                                        <?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'wp-bootstrap-starter' ), get_comment_date(), get_comment_time() ); ?>
+                                        <?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'law-of-time-ru' ), get_comment_date(), get_comment_time() ); ?>
                                     </time>
                                 </a>
-                                <?php edit_comment_link( __( '<span style="margin-left: 5px;" class="glyphicon glyphicon-edit"></span> Edit', 'wp-bootstrap-starter' ), '<span class="edit-link">', '</span>' ); ?>
+                                <?php edit_comment_link( __( '<span style="margin-left: 5px;" class="glyphicon glyphicon-edit"></span> Edit', 'law-of-time-ru' ), '<span class="edit-link">', '</span>' ); ?>
                             </div>
                         </div>
 
                         <?php if ( '0' == $comment->comment_approved ) : ?>
-                            <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'wp-bootstrap-starter' ); ?></p>
+                            <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'law-of-time-ru' ); ?></p>
                         <?php endif; ?>
 
                         <div class="comment-content card-block">

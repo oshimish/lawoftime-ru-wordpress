@@ -32,13 +32,13 @@ if ( post_password_required() ) {
             if ( '1' === $comments_number ) {
                 printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'wp-bootstrap-starter' ),
+					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'law-of-time-ru' ),
 					'<span>' . esc_html(get_the_title()) . '</span>'
 				);
             } else {
                 printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $underscore_comment_count, 'comments title', 'wp-bootstrap-starter' ) ),
+					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $underscore_comment_count, 'comments title', 'law-of-time-ru' ) ),
 					esc_html( number_format_i18n( $underscore_comment_count ) ),
 					'<span>' . esc_html( get_the_title() ) . '</span>'
 				);
@@ -49,11 +49,11 @@ if ( post_password_required() ) {
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
             <nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-                <h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'wp-bootstrap-starter' ); ?></h2>
+                <h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'law-of-time-ru' ); ?></h2>
                 <div class="nav-links">
 
-                    <div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'wp-bootstrap-starter' ) ); ?></div>
-                    <div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'wp-bootstrap-starter' ) ); ?></div>
+                    <div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'law-of-time-ru' ) ); ?></div>
+                    <div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'law-of-time-ru' ) ); ?></div>
 
                 </div><!-- .nav-links -->
             </nav><!-- #comment-nav-above -->
@@ -67,11 +67,11 @@ if ( post_password_required() ) {
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
             <nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-                <h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'wp-bootstrap-starter' ); ?></h2>
+                <h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'law-of-time-ru' ); ?></h2>
                 <div class="nav-links">
 
-                    <div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'wp-bootstrap-starter' ) ); ?></div>
-                    <div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'wp-bootstrap-starter' ) ); ?></div>
+                    <div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'law-of-time-ru' ) ); ?></div>
+                    <div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'law-of-time-ru' ) ); ?></div>
 
                 </div><!-- .nav-links -->
             </nav><!-- #comment-nav-below -->
@@ -84,23 +84,23 @@ if ( post_password_required() ) {
     // If comments are closed and there are comments, let's leave a little note, shall we?
     if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
-        <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'wp-bootstrap-starter' ); ?></p>
+        <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'law-of-time-ru' ); ?></p>
         <?php
     endif; ?>
 
     <?php comment_form( $args = array(
         'id_form'           => 'commentform',  // that's the wordpress default value! delete it or edit it ;)
         'id_submit'         => 'commentsubmit',
-        'title_reply'       => __( 'Leave a Reply', 'wp-bootstrap-starter' ),  // that's the wordpress default value! delete it or edit it ;)
+        'title_reply'       => __( 'Leave a Reply', 'law-of-time-ru' ),  // that's the wordpress default value! delete it or edit it ;)
 		/* translators: 1: Reply Specific User */
-        'title_reply_to'    => __( 'Leave a Reply to %s', 'wp-bootstrap-starter' ),  // that's the wordpress default value! delete it or edit it ;)
-        'cancel_reply_link' => __( 'Cancel Reply', 'wp-bootstrap-starter' ),  // that's the wordpress default value! delete it or edit it ;)
-        'label_submit'      => __( 'Post Comment', 'wp-bootstrap-starter' ),  // that's the wordpress default value! delete it or edit it ;)
+        'title_reply_to'    => __( 'Leave a Reply to %s', 'law-of-time-ru' ),  // that's the wordpress default value! delete it or edit it ;)
+        'cancel_reply_link' => __( 'Cancel Reply', 'law-of-time-ru' ),  // that's the wordpress default value! delete it or edit it ;)
+        'label_submit'      => __( 'Post Comment', 'law-of-time-ru' ),  // that's the wordpress default value! delete it or edit it ;)
 
         'comment_field' =>  '<p><textarea placeholder="Start typing..." id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
 
         'comment_notes_after' => '<p class="form-allowed-tags">' .
-            __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', 'wp-bootstrap-starter' ) .
+            __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', 'law-of-time-ru' ) .
             '</p><div class="alert alert-info">' . allowed_tags() . '</div>'
 
         // So, that was the needed stuff to have bootstrap basic styles for the form elements and buttons

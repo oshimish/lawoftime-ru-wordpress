@@ -21,8 +21,8 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'typography',
         array(
-            'title' => __( 'Preset Styles', 'wp-bootstrap-starter' ),
-            //'description' => __( 'This is a section for the typography', 'wp-bootstrap-starter' ),
+            'title' => __( 'Preset Styles', 'law-of-time-ru' ),
+            //'description' => __( 'This is a section for the typography', 'law-of-time-ru' ),
             'priority' => 20,
         )
     );
@@ -35,7 +35,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'theme_option_setting', array(
-        'label' => __( 'Theme Option', 'wp-bootstrap-starter' ),
+        'label' => __( 'Theme Option', 'law-of-time-ru' ),
         'section'    => 'typography',
         'settings'   => 'theme_option_setting',
         'type'    => 'select',
@@ -72,7 +72,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'preset_style_setting', array(
-        'label' => __( 'Typography', 'wp-bootstrap-starter' ),
+        'label' => __( 'Typography', 'law-of-time-ru' ),
         'section'    => 'typography',
         'settings'   => 'preset_style_setting',
         'type'    => 'select',
@@ -97,7 +97,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'preset_color_scheme_setting', array(
-        'label' => __( 'Color Scheme', 'wp-bootstrap-starter' ),
+        'label' => __( 'Color Scheme', 'law-of-time-ru' ),
         'section'    => 'typography',
         'settings'   => 'preset_color_scheme_setting',
         'type'    => 'select',
@@ -115,7 +115,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'header_image',
         array(
-            'title' => __( 'Header Banner', 'wp-bootstrap-starter' ),
+            'title' => __( 'Header Banner', 'law-of-time-ru' ),
             'priority' => 30,
         )
     );
@@ -124,7 +124,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     $wp_customize->add_control(
         'header_img',
         array(
-            'label' => __( 'Header Image', 'wp-bootstrap-starter' ),
+            'label' => __( 'Header Image', 'law-of-time-ru' ),
             'section' => 'header_images',
             'type' => 'text',
         )
@@ -142,18 +142,18 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
             $wp_customize,
             'header_bg_color',
             array(
-                'label'      => __( 'Header Banner Background Color', 'wp-bootstrap-starter' ),
+                'label'      => __( 'Header Banner Background Color', 'law-of-time-ru' ),
                 'section'    => 'header_image',
                 'settings'   => 'header_bg_color_setting',
             ) )
     );
 
     $wp_customize->add_setting( 'header_banner_title_setting', array(
-        'default' => __( 'WP Bootstrap Framework', 'wp-bootstrap-starter' ),
+        'default' => __( 'WP Bootstrap Framework', 'law-of-time-ru' ),
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'header_banner_title_setting', array(
-        'label' => __( 'Banner Title', 'wp-bootstrap-starter' ),
+        'label' => __( 'Banner Title', 'law-of-time-ru' ),
         'section'    => 'header_image',
         'settings'   => 'header_banner_title_setting',
         'type' => 'text'
@@ -164,7 +164,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'header_banner_tagline_setting', array(
-        'label' => __( 'Banner Tagline', 'wp-bootstrap-starter' ),
+        'label' => __( 'Banner Tagline', 'law-of-time-ru' ),
         'section'    => 'header_image',
         'settings'   => 'header_banner_tagline_setting',
         'type' => 'text'
@@ -175,7 +175,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'header_banner_visibility', array(
         'settings' => 'header_banner_visibility',
-        'label'    => __('Remove Header Banner', 'wp-bootstrap-starter'),
+        'label'    => __('Remove Header Banner', 'law-of-time-ru'),
         'section'    => 'header_image',
         'type'     => 'checkbox',
     ) ) );
@@ -185,16 +185,16 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
    $wp_customize->add_section(
         'site_name_text_color',
         array(
-            'title' => __( 'Other Customizations', 'wp-bootstrap-starter' ),
-            //'description' => __( 'This is a section for the header banner Image.', 'wp-bootstrap-starter' ),
+            'title' => __( 'Other Customizations', 'law-of-time-ru' ),
+            //'description' => __( 'This is a section for the header banner Image.', 'law-of-time-ru' ),
             'priority' => 40,
         )
     );
     $wp_customize->add_section(
         'colors',
         array(
-            'title' => __( 'Background Color', 'wp-bootstrap-starter' ),
-            //'description' => __( 'This is a section for the header banner Image.', 'wp-bootstrap-starter' ),
+            'title' => __( 'Background Color', 'law-of-time-ru' ),
+            //'description' => __( 'This is a section for the header banner Image.', 'law-of-time-ru' ),
             'priority' => 50,
             'panel' => 'styling_option_panel',
         )
@@ -202,8 +202,8 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'background_image',
         array(
-            'title' => __( 'Background Image', 'wp-bootstrap-starter' ),
-            //'description' => __( 'This is a section for the header banner Image.', 'wp-bootstrap-starter' ),
+            'title' => __( 'Background Image', 'law-of-time-ru' ),
+            //'description' => __( 'This is a section for the header banner Image.', 'law-of-time-ru' ),
             'priority' => 60,
             'panel' => 'styling_option_panel',
         )
@@ -217,14 +217,14 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     $wp_customize->add_control( 
         'cdn_assets',
         array(
-            'label' => __( 'Use CDN for Assets', 'wp-bootstrap-starter' ),
-            'description' => __( 'All Bootstrap Assets and FontAwesome will be loaded in CDN.', 'wp-bootstrap-starter' ),
+            'label' => __( 'Use CDN for Assets', 'law-of-time-ru' ),
+            'description' => __( 'All Bootstrap Assets and FontAwesome will be loaded in CDN.', 'law-of-time-ru' ),
             'section' => 'site_name_text_color',
             'settings' => 'cdn_assets_setting',
 	        'type'    => 'select',
 	        'choices' => array(
-	            'yes' => __( 'Yes', 'wp-bootstrap-starter' ),
-	            'no' => __( 'No', 'wp-bootstrap-starter' ),
+	            'yes' => __( 'Yes', 'law-of-time-ru' ),
+	            'no' => __( 'No', 'law-of-time-ru' ),
         	)
         )
     );
@@ -239,11 +239,11 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
 
     // Add control for logo uploader
     $wp_customize->add_setting( 'wp_bootstrap_starter_logo', array(
-        //'default' => __( '', 'wp-bootstrap-starter' ),
+        //'default' => __( '', 'law-of-time-ru' ),
         'sanitize_callback' => 'esc_url',
     ) );
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'wp_bootstrap_starter_logo', array(
-        'label'    => __( 'Upload Logo (replaces text)', 'wp-bootstrap-starter' ),
+        'label'    => __( 'Upload Logo (replaces text)', 'law-of-time-ru' ),
         'section'  => 'title_tagline',
         'settings' => 'wp_bootstrap_starter_logo',
     ) ) );

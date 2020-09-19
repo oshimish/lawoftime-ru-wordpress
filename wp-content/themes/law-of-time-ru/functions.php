@@ -20,9 +20,9 @@ function wp_bootstrap_starter_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on WP Bootstrap Starter, use a find and replace
-	 * to change 'wp-bootstrap-starter' to the name of your theme in all the template files.
+	 * to change 'law-of-time-ru' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'wp-bootstrap-starter', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'law-of-time-ru', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ function wp_bootstrap_starter_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'wp-bootstrap-starter' ),
+		'primary' => esc_html__( 'Primary', 'law-of-time-ru' ),
 	) );
 
 	/*
@@ -83,7 +83,7 @@ function wp_bootstrap_starter_reminder(){
         $theme_page_url = 'https://afterimagedesigns.com/wp-bootstrap-starter/?dashboard=1';
 
             if(!get_option( 'triggered_welcomet')){
-                $message = sprintf(__( 'Welcome to WP Bootstrap Starter Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'wp-bootstrap-starter' ),
+                $message = sprintf(__( 'Welcome to WP Bootstrap Starter Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'law-of-time-ru' ),
                     esc_url( $theme_page_url )
                 );
 
@@ -118,36 +118,36 @@ add_action( 'after_setup_theme', 'wp_bootstrap_starter_content_width', 0 );
  */
 function wp_bootstrap_starter_widgets_init() {
     register_sidebar( array(
-        'name'          => esc_html__( 'Sidebar', 'wp-bootstrap-starter' ),
+        'name'          => esc_html__( 'Sidebar', 'law-of-time-ru' ),
         'id'            => 'sidebar-1',
-        'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
+        'description'   => esc_html__( 'Add widgets here.', 'law-of-time-ru' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer 1', 'wp-bootstrap-starter' ),
+        'name'          => esc_html__( 'Footer 1', 'law-of-time-ru' ),
         'id'            => 'footer-1',
-        'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
+        'description'   => esc_html__( 'Add widgets here.', 'law-of-time-ru' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer 2', 'wp-bootstrap-starter' ),
+        'name'          => esc_html__( 'Footer 2', 'law-of-time-ru' ),
         'id'            => 'footer-2',
-        'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
+        'description'   => esc_html__( 'Add widgets here.', 'law-of-time-ru' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
-        'name'          => esc_html__( 'Footer 3', 'wp-bootstrap-starter' ),
+        'name'          => esc_html__( 'Footer 3', 'law-of-time-ru' ),
         'id'            => 'footer-3',
-        'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
+        'description'   => esc_html__( 'Add widgets here.', 'law-of-time-ru' ),
         'before_widget' => '<section id="%1$s" class="widget %2$s">',
         'after_widget'  => '</section>',
         'before_title'  => '<h3 class="widget-title">',
