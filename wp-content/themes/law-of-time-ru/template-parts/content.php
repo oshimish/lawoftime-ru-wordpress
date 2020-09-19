@@ -33,7 +33,7 @@
         if ( is_single() ) :
 			the_content();
         else :
-            the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'law-of-time-ru' ) );
+            the_content( __( 'Читать дальше <span class="meta-nav">&rarr;</span>', 'law-of-time-ru' ) );
         endif;
 
 			wp_link_pages( array(

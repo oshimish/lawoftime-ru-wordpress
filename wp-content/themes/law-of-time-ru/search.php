@@ -7,7 +7,8 @@
  * @package WP_Bootstrap_Starter
  */
 
-get_header(); ?>
+get_header();
+get_sidebar(); ?>
 
 	<section id="primary" class="content-area col-sm-12 col-lg-8">
 		<main id="main" class="site-main" role="main">
@@ -44,5 +45,4 @@ get_header(); ?>
 	</section><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

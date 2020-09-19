@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blank with Container
+ * Template Name: Пустая с Контейнером
  */
 
 get_header();

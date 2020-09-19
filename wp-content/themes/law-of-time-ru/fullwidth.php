@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Full Width
+* Template Name: Полная Ширина
  */
 
 get_header(); ?>
