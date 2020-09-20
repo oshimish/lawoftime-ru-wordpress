@@ -40,7 +40,7 @@
                 'container_class' => 'collapse navbar-collapse justify-content-end',
                 'menu_id'         => false,
                 'menu_class'      => 'navbar-nav',
-                'depth'           => 3,
+                'depth'           => 0,
                 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                 'walker'          => new wp_bootstrap_navwalker()
                 ));

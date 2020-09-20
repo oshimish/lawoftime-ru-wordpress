@@ -3,19 +3,11 @@ CTC Separate Stylesheet
 Updated: 2020-06-14 11:57:12
 */
 
-.page h1,
-.page h2 {
-  text-align: right;
-}
-
 /* old styled */
 
-p {
-  font-family: "Montserrat", sans-serif !important;
-}
 blockquote {
   color: #fff !important;
-  background-image: url("./img/Background-13MoonImg.png") !important;
+  background-image: url("./img/Background/Background-NoosphereImg.jpg") !important;
   background-repeat: no-repeat !important;
   padding: 50px 60px !important;
 }
@@ -26,7 +18,7 @@ blockquote {
   line-height: 28px;
   font-weight: 400;
   text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   letter-spacing: 1.12px;
   padding: 2px 8px;
   margin: auto;
@@ -43,7 +35,7 @@ blockquote {
   text-decoration: none;
   text-align: left;
   min-width: 200px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   letter-spacing: 1.12px;
   padding: 1px 20px 1px 10px;
   margin: auto;

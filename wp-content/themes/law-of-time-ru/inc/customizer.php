@@ -78,12 +78,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
         'type'    => 'select',
         'choices' => array(
             'default' => 'Default',
-            'arbutusslab-opensans' => 'Arbutus Slab / Opensans',
-            'montserrat-merriweather' => 'Montserrat / Merriweather',
-            'montserrat-opensans' => 'Montserrat / Opensans',
-            'oswald-muli' => 'Oswald / Muli',
-            'poppins-lora' => 'Poppins / Lora',
-            'poppins-poppins' => 'Poppins / Poppins',
+            'montserrat-opensans' => 'Montserrat / Opensans',          
             'roboto-roboto' => 'Roboto / Roboto',
             'robotoslab-roboto' => 'Roboto Slab / Roboto',
         )
@@ -160,7 +155,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
     ) ) );
 
     $wp_customize->add_setting( 'header_banner_tagline_setting', array(
-        'default' => __( 'To customize the contents of this header banner and other elements of your site go to Dashboard - Appearance - Customize','wp-bootstrap-starter' ),
+        'default' => __( 'To customize the contents of this header banner and other elements of your site go to Dashboard - Appearance - Customize', 'law-of-time-ru' ),
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( new WP_Customize_Control($wp_customize, 'header_banner_tagline_setting', array(
@@ -211,7 +206,7 @@ function wp_bootstrap_starter_customize_register( $wp_customize ) {
 
     // Bootstrap and Fontawesome Option
     $wp_customize->add_setting( 'cdn_assets_setting', array(
-        'default' => __( 'no','wp-bootstrap-starter' ),
+        'default' => __( 'no', 'law-of-time-ru' ),
         'sanitize_callback' => 'wp_filter_nohtml_kses',
     ) );
     $wp_customize->add_control( 

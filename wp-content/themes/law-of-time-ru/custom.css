@@ -1,24 +1,10 @@
-/*
-CTC Separate Stylesheet
-Updated: 2020-06-06 17:21:17
-Theme Name: Law Of Time RU
-Theme URI: https://www.law-of-time.ru/
-Template: wp-bootstrap-starter
-Author: Raman Oshimish
-Author URI: https://www.law-of-time.ru/
-Description: Custo theme for the https://www.law-of-time.ru/ web site
-Tags: blog,custom-menu,featured-images,threaded-comments,translation-ready,right-sidebar,custom-background,e-commerce,theme-options,sticky-post,full-width-template
-Version: 3.3.3.1591453277
-*/
-
 /*--------------------------------------------------------------
 ## Common
 --------------------------------------------------------------*/
 
-.slogan {
-  max-height: 72px;
+body {
+  font-family: "Open Sans", sans-serif;
 }
-
 a,
 a:hover {
   color: black;
@@ -29,10 +15,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important; */
 }
 body {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important;
+  /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important; */
 }
 /*--------------------------------------------------------------
 ## Layout
@@ -48,10 +34,19 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   padding: 0.74rem 1rem;
+  z-index: 11;
 }
 #pagehead nav {
   padding-left: 0;
   padding-right: 0;
+}
+
+#pagehead .slogan {
+  max-height: 101px;
+}
+
+#pagehead .navbar-brand {
+  margin-right: 8px;
 }
 
 #pagehead .navbar-nav > li > a {
@@ -59,24 +54,40 @@ body {
   padding: 0.5rem;
   font-weight: 500;
   font-size: 0.875rem; */
+  cursor: pointer;
 }
 
 #pagehead .navbar-nav > li > a:hover,
-#pagehead .navbar-nav > li.current_page_item > a {
+#pagehead .navbar-nav > li.active > a {
   /* color: black; */
-  font-weight: 600;
+  /* font-weight: 600; */
   /*background: #f9f9f9;*/
 }
 
-#menu-top_menu {
+#top-menu {
+  justify-content: space-around;
+  width: 91%;
 }
 
+#top-menu .nav-item {
+  padding: 1rem;
+  font-size: 18px;
+  text-align: center;
+}
+#top-menu .nav-item.active {
+  font-weight: 600;
+  border-bottom: 6px solid #df5042;
+}
+
+#top-menu .nav-item:hover {
+  border-bottom: 6px solid #df5042;
+}
 /*--------------------------------------------------------------
 ## Layout Left Sidebar 
 --------------------------------------------------------------*/
 
 #secondary {
-  /* font-family: "Raleway", sans-serif !important; */
+  font-family: "Open Sans", sans-serif !important;
 }
 
 #secondary .widget_nav_menu {
@@ -108,6 +119,18 @@ body {
 ## Layout Content
 --------------------------------------------------------------*/
 
+.page h1,
+.page h2 {
+  text-align: right;
+}
+
+.site-main {
+  padding: 0 1rem;
+}
+.site-main,
+.site-main p {
+  font-family: "Open Sans", sans-serif !important;
+}
 .entry-content h2,
 .entry-header {
   /* text-align: right; */
@@ -121,15 +144,11 @@ body {
   margin-bottom: 2rem;
 }
 
-.site-main {
-  padding: 0 1rem;
-}
-
 .entry-content {
   background-color: white;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-  padding: 0.74rem 1rem;
+  padding: 1.44rem 2.1rem;
 }
 .entry-content {
 }
@@ -159,15 +178,26 @@ h1.entry-title {
 #footer-widget a,
 #footer-widget a:hover {
   color: #f9f9f9;
+  font-size: 0.8rem;
 }
 
 #footer-widget .widget {
+  margin: 1em;
   font-size: 0.875rem;
   height: fit-content;
+  /* justify-content: end; */
 }
 
 #footer-widget .widget_nav_menu .nav.flex-column {
   flex-direction: row !important;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+#footer-widget .nav > li > a:focus,
+.nav > li > a:hover {
+  background-color: inherit;
+  text-decoration: underline;
 }
 
 #colophon {
@@ -188,6 +218,10 @@ h1.entry-title {
 /* adjust for admin bar */
 body.home.admin-bar #page {
   padding-top: 32px;
+}
+
+.home .slogan {
+  max-height: 72px;
 }
 
 .home #page {
@@ -224,7 +258,7 @@ body.home.admin-bar #page {
   /* font-size: 0.875rem; */
 }
 
-#homehead .navbar-nav > li > a:hover,
+/* #homehead .navbar-nav > li > a:hover, */
 #homehead .navbar-nav > li.current_page_item > a {
   color: #fff;
   font-weight: 600;

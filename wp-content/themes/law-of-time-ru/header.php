@@ -16,7 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
 <?php wp_head(); ?>
 </head>
 
@@ -28,7 +29,7 @@
         <nav class="navbar sticky-top navbar-light navbar-expand-xl p-0">
             <div class="navbar-brand">
                 <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                    <img class="slogan" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/img/Logo-Slogan.png'); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                    <img class="slogan" src="<?php echo esc_url(get_stylesheet_directory_uri() . '/img/Logo-Slogan-Light.png'); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                 </a>
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,8 +42,8 @@
             'container'       => 'div',
             'container_id'    => 'main-nav',
             'container_class' => 'collapse navbar-collapse justify-content-end',
-            'menu_id'         => false,
-            'menu_class'      => 'navbar-nav justify-content-between',
+            'menu_id'         => 'top-menu',
+            'menu_class'      => 'navbar-nav',
             'depth'           => 3,
             'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
             'walker'          => new wp_bootstrap_navwalker()
@@ -59,7 +60,7 @@
                     if(get_theme_mod( 'header_banner_title_setting' )){
                         echo get_theme_mod( 'header_banner_title_setting' );
                     }else{
-                        echo 'WordPress + Bootstrap';
+                        echo 't(e) = art';
                     }
                     ?>
                 </h1>
@@ -68,7 +69,7 @@
                     if(get_theme_mod( 'header_banner_tagline_setting' )){
                         echo get_theme_mod( 'header_banner_tagline_setting' );
                 }else{
-                        echo esc_html__('To customize the contents of this header banner and other elements of your site, go to Dashboard > Appearance > Customize','wp-bootstrap-starter');
+                        echo esc_html__('To customize the contents of this header banner and other elements of your site, go to Dashboard > Appearance > Customize', 'law-of-time-ru');
                     }
                     ?>
                 </p>

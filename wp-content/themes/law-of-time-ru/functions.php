@@ -60,7 +60,7 @@ function wp_bootstrap_starter_setup() {
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'wp_bootstrap_starter_custom_background_args', array(
 		'default-color' => 'ffffff',
-		'default-image' => '',
+		'default-image' => get_template_directory_uri() . '/img/TextureSimpleBrick.jpg',
 	) ) );
 
 	// Add theme support for selective refresh for widgets.
@@ -74,30 +74,6 @@ function wp_bootstrap_starter_setup() {
 }
 endif;
 add_action( 'after_setup_theme', 'wp_bootstrap_starter_setup' );
-
-
-/**
- * Add Welcome message to dashboard
- */
-function wp_bootstrap_starter_reminder(){
-        $theme_page_url = 'https://afterimagedesigns.com/wp-bootstrap-starter/?dashboard=1';
-
-            if(!get_option( 'triggered_welcomet')){
-                $message = sprintf(__( 'Welcome to WP Bootstrap Starter Theme! Before diving in to your new theme, please visit the <a style="color: #fff; font-weight: bold;" href="%1$s" target="_blank">theme\'s</a> page for access to dozens of tips and in-depth tutorials.', 'law-of-time-ru' ),
-                    esc_url( $theme_page_url )
-                );
-
-                printf(
-                    '<div class="notice is-dismissible" style="background-color: #6C2EB9; color: #fff; border-left: none;">
-                        <p>%1$s</p>
-                    </div>',
-                    $message
-                );
-                add_option( 'triggered_welcomet', '1', '', 'yes' );
-            }
-
-}
-add_action( 'admin_notices', 'wp_bootstrap_starter_reminder' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -176,23 +152,8 @@ function wp_bootstrap_starter_scripts() {
     if(get_theme_mod( 'theme_option_setting' ) && get_theme_mod( 'theme_option_setting' ) !== 'default') {
         wp_enqueue_style( 'wp-bootstrap-starter-'.get_theme_mod( 'theme_option_setting' ), get_template_directory_uri() . '/inc/assets/css/presets/theme-option/'.get_theme_mod( 'theme_option_setting' ).'.css', false, '' );
     }
-    if(get_theme_mod( 'preset_style_setting' ) === 'poppins-lora') {
-        wp_enqueue_style( 'wp-bootstrap-starter-poppins-lora-font', 'https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i|Poppins:300,400,500,600,700' );
-    }
-    if(get_theme_mod( 'preset_style_setting' ) === 'montserrat-merriweather') {
-        wp_enqueue_style( 'wp-bootstrap-starter-montserrat-merriweather-font', 'https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,900|Montserrat:300,400,400i,500,700,800' );
-    }
-    if(get_theme_mod( 'preset_style_setting' ) === 'poppins-poppins') {
-        wp_enqueue_style( 'wp-bootstrap-starter-poppins-font', 'https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700' );
-    }
     if(get_theme_mod( 'preset_style_setting' ) === 'roboto-roboto') {
         wp_enqueue_style( 'wp-bootstrap-starter-roboto-font', 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i' );
-    }
-    if(get_theme_mod( 'preset_style_setting' ) === 'arbutusslab-opensans') {
-        wp_enqueue_style( 'wp-bootstrap-starter-arbutusslab-opensans-font', 'https://fonts.googleapis.com/css?family=Arbutus+Slab|Open+Sans:300,300i,400,400i,600,600i,700,800' );
-    }
-    if(get_theme_mod( 'preset_style_setting' ) === 'oswald-muli') {
-        wp_enqueue_style( 'wp-bootstrap-starter-oswald-muli-font', 'https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800|Oswald:300,400,500,600,700' );
     }
     if(get_theme_mod( 'preset_style_setting' ) === 'montserrat-opensans') {
         wp_enqueue_style( 'wp-bootstrap-starter-montserrat-opensans-font', 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300,300i,400,400i,600,600i,700,800' );
@@ -209,6 +170,9 @@ function wp_bootstrap_starter_scripts() {
     }else {
         wp_enqueue_style( 'wp-bootstrap-starter-default', get_template_directory_uri() . '/inc/assets/css/presets/color-scheme/blue.css', false, '' );
     }*/
+
+    wp_enqueue_style( 'ctc-style_separate', trailingslashit( get_stylesheet_directory_uri() ) . 'ctc-style.css' );
+    wp_enqueue_style( 'custom-style', trailingslashit( get_stylesheet_directory_uri() ) . 'custom.css' );
 
 	wp_enqueue_script('jquery');
 
@@ -232,7 +196,6 @@ function wp_bootstrap_starter_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wp_bootstrap_starter_scripts' );
-
 
 
 /**
@@ -260,8 +223,8 @@ function wp_bootstrap_starter_password_form() {
     global $post;
     $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
     $o = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
-    <div class="d-block mb-3">' . __( "To view this protected post, enter the password below:", "wp-bootstrap-starter" ) . '</div>
-    <div class="form-group form-inline"><label for="' . $label . '" class="mr-2">' . __( "Password:", "wp-bootstrap-starter" ) . ' </label><input name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" class="form-control mr-2" /> <input type="submit" name="Submit" value="' . esc_attr__( "Submit", "wp-bootstrap-starter" ) . '" class="btn btn-primary"/></div>
+    <div class="d-block mb-3">' . __( "To view this protected post, enter the password below:",  "law-of-time-ru" ) . '</div>
+    <div class="form-group form-inline"><label for="' . $label . '" class="mr-2">' . __( "Password:",  "law-of-time-ru" ) . ' </label><input name="post_password" id="' . $label . '" type="password" size="20" maxlength="20" class="form-control mr-2" /> <input type="submit" name="Submit" value="' . esc_attr__( "Submit",  "law-of-time-ru" ) . '" class="btn btn-primary"/></div>
     </form>';
     return $o;
 }
@@ -302,16 +265,8 @@ if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
 }
 
 
-// https://wordpress.stackexchange.com/questions/224240/twenty-fifteen-theme-background-customization
-function lof_custom_background_args($args) {
-    $args['default-image'] = get_stylesheet_directory_uri() . '/img/TextureSimpleBrick.jpg';
-    return $args;
-}
-add_filter( 'wp_bootstrap_starter_custom_background_args',
-            'lof_custom_background_args' );
-
 // register home page menu.
-    register_nav_menus( array(
+register_nav_menus( array(
     'home' => esc_html__( 'Home', 'law-of-time' ),
 ) );
 
