@@ -38,6 +38,9 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
 # Normalize
 --------------------------------------------------------------*/
 body {
+  font-family: "Open Sans", sans-serif;
+  /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif !important; */
+
   margin: 0;
   -webkit-font-smoothing: auto;
 }
@@ -84,6 +87,10 @@ a:hover {
   outline: 0;
 }
 
+a,
+a:hover {
+  color: black;
+}
 dfn {
   font-style: italic;
 }
@@ -780,6 +787,11 @@ a img.aligncenter {
 
 .entry-title > a {
   color: inherit;
+}
+
+.entry-meta,
+.entry-footer {
+  display: none;
 }
 
 /*--------------------------------------------------------------

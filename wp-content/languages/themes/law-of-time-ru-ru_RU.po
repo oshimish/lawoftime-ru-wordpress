@@ -17,7 +17,7 @@ msgstr "Лучшая тема для WordPress, основанная на сам
 
 #. Theme Name of the theme
 msgid "WP Bootstrap Starter"
-msgstr "WP Bootstrap Starter"
+msgstr "law of time RU"
 
 #: woocommerce/cart/cart.php:33
 msgid "Subtotal"
@@ -385,9 +385,9 @@ msgid "https://afterimagedesigns.com/wp-bootstrap-starter/"
 msgstr "https://afterimagedesigns.com/wp-bootstrap-starter/"
 
 #. Author URI of the theme
-msgid "https://afterimagedesigns.com/"
-msgstr "https://afterimagedesigns.com/"
+msgid "https://www.law-of-time.ru/"
+msgstr "https://www.law-of-time.ru/"
 
 #. Author of the theme
-msgid "Afterimage Designs"
-msgstr "Afterimage Designs"
+msgid "oshimish"
+msgstr "oshimish"
