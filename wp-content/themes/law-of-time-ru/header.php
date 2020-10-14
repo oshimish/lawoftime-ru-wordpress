@@ -24,7 +24,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'law-of-time-ru' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-	<header id="pagehead" class="site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
+	<header id="pagehead" class="site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?> px-2 pt-2" role="banner">
         <nav class="navbar sticky-top navbar-light navbar-expand-xl p-0">
             <div class="navbar-brand">
                 <a href="<?php echo esc_url( home_url( '/' )); ?>">

@@ -372,10 +372,6 @@ a.page-scroller {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-#masthead nav {
-  padding-left: 0;
-  padding-right: 0;
-}
 
 body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
   color: #cdbfe3;
@@ -386,7 +382,7 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
 
 body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover,
 body:not(.theme-preset-active)
-  #masthead
+  #pagehead
   .navbar-nav
   > li.current_page_item
   > a {
@@ -517,7 +513,7 @@ body:not(.theme-preset-active)
     padding: 0;
   }
 
-  #masthead .navbar-nav > li > a {
+  #pagehead .navbar-nav > li > a {
     padding-bottom: 0.625rem;
     padding-top: 0.313rem;
   }
@@ -738,6 +734,11 @@ a img.aligncenter {
 #content.site-content {
   padding-bottom: 3.75rem;
   padding-top: 4.125rem;
+}
+
+.page-header,
+.entry-title {
+  text-align: right;
 }
 
 .sticky .entry-title::before {
@@ -1011,7 +1012,7 @@ footer#colophon a {
 }
 
 @media screen and (max-width: 767px) {
-  #masthead .navbar-nav > li > a {
+  #pagehead .navbar-nav > li > a {
     padding-bottom: 0.938rem;
     padding-top: 0.938rem;
   }

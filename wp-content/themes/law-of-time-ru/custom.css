@@ -11,7 +11,7 @@
   background-color: white;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-  padding: 0.74rem 1rem;
+  /* padding: 0.74rem 1rem; */
   z-index: 11;
 }
 #pagehead nav {
@@ -59,7 +59,7 @@
 }
 
 #top-menu .nav-item:hover {
-  border-bottom: 6px solid #df5042;
+  border-bottom: 6px solid #df50422b;
 }
 /*--------------------------------------------------------------
 ## Layout Left Sidebar 
@@ -85,6 +85,9 @@
 #secondary .nav.sub-menu {
   margin-left: 1rem;
 }
+#secondary .nav.sub-menu .current-menu-item {
+  font-weight: bolder;
+}
 
 /*--------------------------------------------------------------
 ## Layout Content
@@ -98,7 +101,7 @@
 .site-main {
   padding: 0 1rem;
 }
-.site-main,
+
 .site-main p {
   font-family: "Open Sans", sans-serif !important;
 }
